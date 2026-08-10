@@ -57,3 +57,8 @@ function analyzeTexts(texts, phraseLength) {
 }
 
 console.log(analyzeTexts([words, words], 2));
+
+const fruits = ["Mango", "Pineapple", "Oranges"];
+for (const fruit of fruits) {
+  console.log(fruit);
+}
