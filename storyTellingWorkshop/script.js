@@ -1,0 +1,48 @@
+const storyContainer = document.querySelector(".story-container");
+
+const scaryStoryBtn = document.querySelector("#scary-btn");
+const funnyStoryBtn = document.querySelector("#funny-btn");
+const adventureStoryBtn = document.querySelector("#adventure-btn");
+
+const resultParagraph = document.querySelector("#result");
+
+let storyObj = {
+  scary: {
+    story:
+      "In the dark woods, a group of friends stumbled upon an old, abandoned cabin. They enter the cabin and awaken something malevolent that had been dormant for centuries.",
+    borderColor: "#ee4b2b",
+  },
+  funny: {
+    story:
+      "During a camping trip, Mark decided to show off his culinary skills by cooking dinner over an open fire. However, his attempt caused him to burn the dinner as well as his eyebrows off.",
+    borderColor: "#f1be32",
+  },
+  adventure: {
+    story:
+      "Lost in the heart of the Amazon rain forest, Sarah and Jake stumbled upon an ancient temple. They braved deadly traps and encountered strange wildlife, all while deciphering cryptic clues left behind by a mysterious civilization.",
+    borderColor: "#acd157",
+  },
+};
+
+function displayStory(genre) {
+  const validators = {
+    isAttrValid: (obj, attr) => Object.hasOwn(obj, attr),
+  };
+
+  if (!validators[`isAttrValid`](storyObj, genre)) {
+    return;
+  }
+  const { story, borderColor } = storyObj[genre];
+  storyContainer.style.borderColor = borderColor;
+  resultParagraph.textContent = story;
+}
+
+scaryStoryBtn.addEventListener("click", () => {
+  displayStory("scary");
+});
+funnyStoryBtn.addEventListener("click", () => {
+  displayStory("funny");
+});
+adventureStoryBtn.addEventListener("click", () => {
+  displayStory("adventure");
+});
