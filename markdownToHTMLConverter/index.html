@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Converta Markdown básico em HTML e acompanhe o resultado em tempo real.">
+    <title>Markdown to HTML Converter</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="brand" href="#main-content" aria-label="Ir para o conversor">
+            <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+            <span>Markly</span>
+        </a>
+        <span class="status-pill">
+            <span class="status-dot" aria-hidden="true"></span>
+            Conversão em tempo real
+        </span>
+    </header>
+
+    <main id="main-content">
+        <section class="hero" aria-labelledby="page-title">
+            <p class="eyebrow">Markdown playground</p>
+            <h1 id="page-title">Do Markdown ao HTML, sem complicação.</h1>
+            <p class="hero-copy">
+                Escreva à esquerda e acompanhe o código e a visualização atualizarem instantaneamente.
+            </p>
+        </section>
+
+        <section id="container" aria-label="Conversor de Markdown para HTML">
+            <article class="panel panel-input">
+                <div class="panel-heading">
+                    <div>
+                        <span class="step">01</span>
+                        <h2>Markdown</h2>
+                    </div>
+                    <span class="panel-label">Entrada</span>
+                </div>
+                <label class="sr-only" for="markdown-input">Digite seu Markdown</label>
+                <textarea id="markdown-input" placeholder="# Uma nova ideia&#10;&#10;Escreva algo **incrível** aqui..."></textarea>
+                <p class="helper-text">Compatível com títulos, ênfase, links, imagens e citações.</p>
+            </article>
+
+            <article class="panel">
+                <div class="panel-heading">
+                    <div>
+                        <span class="step">02</span>
+                        <h2>HTML gerado</h2>
+                    </div>
+                    <span class="panel-label">Código</span>
+                </div>
+                <div id="html-output" class="output-area" aria-live="polite">
+                    <span class="empty-state">Seu HTML aparecerá aqui.</span>
+                </div>
+            </article>
+
+            <article class="panel">
+                <div class="panel-heading">
+                    <div>
+                        <span class="step">03</span>
+                        <h2>Preview</h2>
+                    </div>
+                    <span class="panel-label">Resultado</span>
+                </div>
+                <div id="preview" class="output-area preview-area">
+                    <span class="empty-state">A visualização ficará disponível aqui.</span>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Feito para experimentar, aprender e criar.</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
