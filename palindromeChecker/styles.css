@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --dark-grey: #1b1b32;
+    --light-grey: #f5f6f7;
+    --golden-yellow: #fecc4c;
+    --yellow: #ffcc4c;
+    --gold: #feac32;
+    --orange: #ffac33;
+    --dark-orange: #f89808;
+}
+
+button {
+    width: 96px;
+}
+
+input,
+button {
+    padding: 4px;
+}
+
+body {
+    background-color: var(--dark-grey);
+    color: var(--light-grey);
+}
+
+main,
+.container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin: 36px;
+}
+
+.action {
+    margin: 12px;
+}
+
+.container {
+    background-color: var(--light-grey);
+    color: var(--dark-grey);
+    width: 512px;
+    border-radius: 12px;
+    padding: 12px;
+}
